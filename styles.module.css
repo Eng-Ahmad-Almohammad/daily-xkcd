@@ -4,7 +4,9 @@
   padding: 100px;
   text-align: center;
   transition: 100ms ease-in background;
+  margin:10px;
 }
 .hello:hover {
   background: #ccc;
 }
+
