@@ -1,16 +1,23 @@
 import Link from 'next/link'
-
+import Navbar from 'react-bootstrap/Navbar'
+import Nav from 'react-bootstrap/Nav'
+import Form from 'react-bootstrap/Form'
+import FormControl from 'react-bootstrap/FormControl'
+import Button from 'react-bootstrap/Button'
 
 export default function Header(props){
     return(
-        <nav>
-            <Link href='/'>
-                <h2><a style={{textDecoration:'none', color:"black",margin: "10px"}}>Home</a></h2>
-            </Link>
-            <Link href='/about'>
-                <h2><a style={{textDecoration:'none', color:"black",margin: "10px"}}>About</a></h2>
-            </Link>
+        <Navbar bg="dark" variant="dark">
             
-        </nav>
+            <Nav className="mr-auto">
+            <Nav.Link href="/">Home</Nav.Link>
+            <Nav.Link href="/about">About</Nav.Link>
+            
+            </Nav>
+            <Form inline>
+            <FormControl type="text" placeholder="Search" className="mr-sm-2" />
+            <Button variant="outline-info">Search</Button>
+            </Form>
+      </Navbar>
     )
 }

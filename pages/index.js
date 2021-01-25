@@ -1,12 +1,15 @@
 import styles from '../styles.module.css'
 import MyLayout from '../components/MyLayout'
 import Footer from '../components/Footer'
-
+import Header from '../components/Header'
+import 'bootstrap/dist/css/bootstrap.min.css';
 
 export default function Home(props) {
   return (
     <div className={styles.hello}>
+
       <MyLayout>
+        <Header />
         <h1>XKCD</h1>
         <p>{props.data[0].safe_title}</p>
         <img src={props.data[0].img}/>

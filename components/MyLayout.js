@@ -1,20 +1,14 @@
 import Header from '../components/Header'
+import styles from '../styles.module.css'
+
+
 
 export default function MyLayout(props){
     return(
-            <div>
-                <Header />
+            <div className={styles.mylayout}>
+                
                 {props.children}
-                <style jsx>{`
-                    background: gray;
-                    color: goldenrod;
-                    padding: 10px;
-                    margin: 10px;
 
-
-                `}
-
-                </style>
             </div>
 
     )
